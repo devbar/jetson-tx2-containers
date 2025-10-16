@@ -64,5 +64,7 @@ ADD torchvision-0.14.0a0+5ce4506-cp38-cp38-linux_aarch64.whl /opt/
 
 RUN python3 -m pip install /opt/torch-1.13.0a0+git7c98e70-cp38-cp38-linux_aarch64.whl
 RUN python3 -m pip install /opt/torchvision-0.14.0a0+5ce4506-cp38-cp38-linux_aarch64.whl
+RUN python3 -m pip install huggingface_hub==0.30
+RUN python3 -m pip install transformers[torch]==4.46.3
 
 CMD ["/bin/bash", "-c", "echo 'No DRADIS contacts'; sleep infinity"]
